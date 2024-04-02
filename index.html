@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/rock-paper-scissors.png" type="image/x-icon">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+        }
+
+        .boxPartitaVsPc {
+            margin: auto;
+            width: 500px;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 35px;
+        }
+
+        .boxImmagini {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .tastiGiocatorePunteggio {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+
+        .sceltaGiocatore {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            align-content: flex-start;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .centraggio {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="boxPartitaVsPc">
+        <h1>MORRA CINESE</h1>
+        <h2>Tu VS Pc</h2>
+        <h2 id="messaggioVittoria" class="hidden"></h2>
+        <div class="boxImmagini">
+            <img id="immagineGiocatore" src="assets/rock-paper-scissors-2.png" alt="icona mano">
+            <h2>VS</h2>
+            <img id="immaginePc" src="assets/rock-paper-scissors-2.png" alt="icona mano">
+        </div>
+        <div class="tastiGiocatorePunteggio">
+            <div class="sceltaGiocatore">
+                <label for="sceltaMano">Scegli la tua mano</label>
+                <select name="sceltaMano" id="sceltaMano">
+                    <option value="nulla"></option>
+                    <option value="carta">Carta</option>
+                    <option value="forbici">Forbici</option>
+                    <option value="sasso">Sasso</option>
+                </select>
+                <input id="vai" type="button" value="VAI">
+                <input id="rigioca" class="hidden" type="button" value="RIGIOCA">
+            </div>
+            <div class="punteggio">
+                <div class="centraggio">
+                    <h3>GIOCATORE</h3>
+                    <h4 id="punteggioGiocatore">0</h4>
+                </div>
+                <div class="centraggio">
+                    <h3>PC</h3>
+                    <h4 id="punteggioPc">0</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
